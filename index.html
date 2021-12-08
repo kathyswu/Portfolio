@@ -23,7 +23,7 @@
 </head>
 <body>
   <nav>
-    <a>Kathy Wu</a>
+    <h3>Kathy Wu</h3>
     <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -164,8 +164,26 @@
       </div>
     </div>
   </section>
-  <section id="contact">
-    
+  <section id="contact" class="jet">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/wu-kathy/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/kathyswu" target="_blank"><i class="fab fa-github-square"></i> Github</a>
+      <a href="mailto:kathy.s.wu@hotmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+    <form class="contact-form" action="https://getform.io/f/939759ae-aeef-421e-abef-16cbd1199e01" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" placeholder="Name" required/>
+      <label for="email">Email Address</label>
+      <input type="email" name="email" placeholder="Email" required/>
+      <label for="message">Message</label>
+      <textarea name="message" rows="5" cols="40" placeholder="Say hi!" required></textarea>
+      <input type="submit" value="Send" />
+    </form>
   </section>
+  <footer>
+    <p>&copy; 2021 Kathy Wu</p>
+    <p>Portfolio @ General Assembly</p>
+  </footer>
 </body>
 </html>
