@@ -204,18 +204,20 @@ nav {
   justify-content: center;
   align-items: center;
   font-size: 1.4em;
-  padding-bottom: 20px;
+  padding: 40px 50px;
+  gap: 20px;
 }
 
 /* Projects Section */
 .project-right {
   display: grid;
-  padding: 20px 100px;
+  padding: 40px 50px;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto;
   justify-content: center;
   align-items: center;
   font-size: 1.4em;
+  line-height: 2em;
 }
 
 #projects-title {
@@ -230,26 +232,28 @@ nav {
 .project h5 {
   display: inline;
   font-size: 1.5em;
-  color: black;
+  color: rgb(22, 22, 22);
 }
 
 .project h6 {
   margin: 0;
   font-size: 1em;
   font-weight: bold;
+  color: rgb(22, 22, 22);
 }
 
 .project p {
   width: 90%;
-  font-size: 1em;
-  color: black;
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.767);
+  line-height: 2em;
 }
 
 .project span {
   display: inline-block;
   margin: 20px 30px;
-  font-size: 1em;
-  color: black;
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.767);
 }
 
 /* Customized to fit portfolio page
@@ -323,19 +327,27 @@ nav {
 
 /* Icons for Github and Live */
 .demo-buttons i {
-  color: black;
+  color: white;
   font-size: 1.4em;
   font-weight: bold;
 }
 
 /* Text Link for Github and Live*/
 .demo-buttons a {
+  margin-top: 10px;
   color: white;
-  font-size: 1em;
+  font-size: 0.7em;
+  text-decoration: none;
   display: flex;
   gap: 10px;
-  align-items: flex-start;
-  border: 1px solid white;
-  padding: 5px 10px;
+  align-items: center;
+  border: 1px solid ivory;
+  padding: 10px;
   border-radius: 10px;
+  justify-content: center;
+}
+
+/* Fix styling for right-oriented project section demo-buttons */
+.project-right .demo-buttons a {
+  padding: 0 10px;
 }
