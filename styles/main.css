@@ -76,15 +76,38 @@ nav {
 
 .nav-links {
   display: grid;
-  padding: 10px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(auto-fill);
   gap: 15px;
+  height: 100%;
+  align-self: center;
 }
 
 .nav-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
   text-decoration: none;
   color: white;
+  height: 100%;
+  align-self: center;
+}
+
+.nav-links span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  text-decoration: none;
+  color: white;
+  height: 100%;
+  align-self: center;
+}
+
+.nav-links a:hover {
+  margin-top: 3px;
+  border-bottom: 3px solid white;
 }
 
 /* Home Section */
@@ -111,7 +134,8 @@ nav {
   max-height: 100%;
   width: auto;
   height: auto;
-  justify-self: flex-start;
+  justify-self: flex-end;
+  align-self: flex-end;
 }
 
 #home h2 > span {
@@ -197,6 +221,15 @@ nav {
   margin-left: 30%;
   padding: 5px 10px;
   color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+/* View Resume button on hover effect */
+#about a:hover {
+  color: var(--jet);
+  background-color: #f5f5f5;
   border: 1px solid #f5f5f5;
   border-radius: 5px;
 }
@@ -328,13 +361,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   gap: 40px;
-}
-
-/* Icons for Github and Live */
-.demo-buttons i {
-  color: white;
-  font-size: 1.4em;
-  font-weight: bold;
+  font-size: 1.2em;
 }
 
 /* Text Link for Github and Live*/
@@ -350,12 +377,12 @@ nav {
   padding: 10px;
   border-radius: 10px;
   justify-content: center;
-  transition: 0.2s ease-in;
+  transition: 0.3s;
 }
 
 .demo-buttons a:hover {
-  font-weight: bold;
-  transform: scale(1.05);
+  background-color: #f5f5f5;
+  color: var(--jet);
 }
 
 /* Fix styling for right-oriented project section demo-buttons */
@@ -370,7 +397,7 @@ nav {
   grid-template-rows: 20% 80%;
   justify-content: flex-start;
   align-items: flex-start;
-  justify-items: center;
+  justify-items: flex-start;
   color: var(--floralwhite);
 }
 
@@ -388,7 +415,7 @@ nav {
   grid-template-rows: auto;
   gap: 20px;
   font-size: 2em;
-  background-color: #fffaf2f1;
+  color: #fffaf2f1;
   padding: 50px;
   border-radius: 20px;
   justify-self: flex-end;
@@ -397,8 +424,12 @@ nav {
 
 /* Contact Link Text */
 #contact a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
   text-decoration: none;
-  color: var(--richblack);
+  color: #fffaf2f1;
   font-weight: bold;
   padding: 10px;
   border-radius: 10px;
@@ -410,19 +441,8 @@ nav {
   color: white;
 }
 
-/* LinkedIn logo color */
-#contact .contact-links .fa-linkedin {
-  color: #0b65c2;
-}
-
-/* Github logo color */
-#contact .contact-links .fa-github-square {
-  color: black;
-}
-
-/* Email logo color */
-#contact .contact-links .fa-envelope {
-  color: #8ac1f9;
+#contact .fa-envelope {
+  font-size: 0.9em;
 }
 
 /* Contact Form Container */
@@ -430,6 +450,7 @@ nav {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
+  margin-left: 100px;
   gap: 20px;
   padding-bottom: 50px;
   font-size: 1.4em;
