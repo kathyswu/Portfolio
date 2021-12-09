@@ -1,5 +1,3 @@
-console.log("Script loaded.");
-
 // Text Writer Typewrite Style Effect
 // by Simon Shahriveri on CodePen
 var TxtType = function (el, toRotate, period) {
