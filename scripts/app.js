@@ -58,3 +58,16 @@ document.addEventListener("DOMContentLoaded", function () {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #71c19d}";
   document.body.appendChild(css);
 });
+
+// Navbar on mobile
+
+var navMenu = document.getElementsByClassName("nav-links")[0];
+navMenu.style.height = "0px";
+
+document.getElementById("nav-burger").addEventListener("click", function () {
+  if (navMenu.style.height == "0px") {
+    navMenu.style.height = "200px";
+  } else {
+    navMenu.style.height = "0px";
+  }
+});

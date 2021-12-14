@@ -74,12 +74,16 @@ nav {
   padding-left: 10px;
 }
 
+.fa-bars {
+  display: none;
+}
+
 .nav-links {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(auto-fill);
   gap: 15px;
-  height: 100%;
+  margin-bottom: 20px;
   align-self: center;
 }
 
@@ -92,6 +96,7 @@ nav {
   color: white;
   height: 100%;
   align-self: center;
+  padding-bottom: 5px;
 }
 
 .nav-links span {
@@ -103,11 +108,12 @@ nav {
   color: white;
   height: 100%;
   align-self: center;
+  padding: 0px 5px;
 }
 
 .nav-links a:hover {
-  margin-top: 3px;
-  border-bottom: 3px solid white;
+  background-color: rgba(105, 105, 105, 0.363);
+  border-radius: 10px;
 }
 
 /* Home Section */
@@ -322,12 +328,6 @@ nav {
 .carousel:hover {
   animation-play-state: paused;
 }
-.carousel .image-one {
-}
-.carousel .image-two {
-}
-.carousel .image-three {
-}
 
 .carousel .aspect-ratio {
   width: var(--size-width);
@@ -422,7 +422,7 @@ nav {
   margin-top: 20px;
 }
 
-/* Contact Link Text */
+/* Contact Link */
 #contact a {
   display: flex;
   justify-content: center;
@@ -497,4 +497,235 @@ footer {
   justify-content: space-between;
   font-weight: 300;
   position: sticky;
+}
+
+@media only screen and (max-width: 955px) {
+  /* Tablets & smartphones */
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    width: 100%;
+    position: absolute;
+    top: 52px;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    background-color: var(--jet);
+    overflow: hidden;
+    transition: 0.4s;
+  }
+
+  .fa-bars {
+    display: block;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #home .intro-block {
+    max-width: 400px;
+    font-size: 1em;
+  }
+
+  #home img {
+    justify-self: flex-end;
+    align-self: center;
+    max-width: 60%;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  /* -- About Block */
+  #about .about-block {
+    font-size: 1.8em;
+    margin: 0px 40px;
+    text-align: center;
+  }
+
+  #about img {
+    justify-self: flex-end;
+    align-self: center;
+    max-width: 60%;
+    margin-bottom: 10px;
+  }
+
+  #about p {
+    padding: 10px 20px 0 0;
+    text-align: justify;
+  }
+
+  #about a {
+    margin: 30px auto;
+  }
+
+  /* Projects Section */
+  .project-left {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .project-right {
+    display: flex;
+    flex-flow: column-reverse wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .project-info {
+    margin: 10px;
+  }
+
+  #projects-title {
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 2em;
+    align-self: flex-start;
+  }
+
+  /* -- Project title subheading */
+  .project h5 {
+    display: inline;
+    font-size: 1.2em;
+    color: rgb(22, 22, 22);
+  }
+
+  .project h6 {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: rgb(22, 22, 22);
+  }
+
+  .project p {
+    width: 90%;
+    text-align: justify;
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.767);
+    line-height: 2em;
+  }
+
+  .project span {
+    display: inline-block;
+    margin: 10px 0px;
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.767);
+    line-height: 2em;
+  }
+
+  .carousel-wrapper {
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    margin: 50px;
+  }
+
+  .carousel-container {
+    width: 300px;
+    height: 262px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .carousel {
+    display: flex;
+    width: calc(300px * 3);
+    animation: sliding 12s infinite;
+  }
+
+  .carousel img {
+    width: 300px;
+    height: 262px;
+  }
+
+  .carousel:hover {
+    animation-play-state: paused;
+  }
+
+  .carousel .aspect-ratio {
+    width: 300px;
+    height: 262px;
+    object-fit: cover;
+  }
+
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-300px);
+    }
+    65% {
+      transform: translateX(-300px);
+    }
+    70% {
+      transform: translateX(-600px);
+    }
+    98% {
+      transform: translateX(-600px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* Project Actionable Buttons Container */
+  .demo-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.2em;
+  }
+
+  /* Contact Section */
+  #contact {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contact .contact-links {
+    display: flex;
+    flex-flow: row-wrap;
+  }
+
+  /* Contact Form Container */
+  #contact .contact-form {
+    display: flex;
+    flex-flow: column wrap;
+    align-self: center;
+    margin-left: 0 auto;
+    gap: 20px;
+    padding-bottom: 50px;
+    font-size: 1.4em;
+  }
+
+  /* Contact form inputs styling */
+  #contact .contact-form input,
+  textarea {
+    width: 80%;
+  }
 }
