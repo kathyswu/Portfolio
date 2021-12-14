@@ -537,6 +537,8 @@ footer {
   #home .intro-block {
     max-width: 400px;
     font-size: 1em;
+    margin: 0 auto;
+    text-align: center;
   }
 
   #home img {
