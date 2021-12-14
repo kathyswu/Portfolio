@@ -48,7 +48,6 @@ Complete
 Plans for future improvement:
 
 - Add more CSS fun animations
-- Introduce mobile-responsiveness
 
 ## Acknowledgements
 
