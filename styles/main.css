@@ -63,7 +63,6 @@ nav {
   position: sticky;
   border-bottom: 2px solid rgba(71, 71, 71, 0.769);
   height: 3em;
-  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,7 +70,7 @@ nav {
   color: white;
   font-size: 1.3em;
   z-index: 10;
-  padding-left: 10px;
+  padding: 0 10px;
 }
 
 .fa-bars {
@@ -498,6 +497,7 @@ footer {
   justify-content: space-between;
   font-weight: 300;
   position: sticky;
+  padding: 0 10px;
 }
 
 @media only screen and (max-width: 955px) {
